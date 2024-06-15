@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Active Slide - fullPage</title>
+    <meta name="author" content="Matthew Howell" />
+    <meta name="description" content="fullPage continuous scrolling demo." />
+    <meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
+    <meta name="Resource-type" content="Document" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Menu1</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Menu2</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Menu3</a></li>
+    </ul>
+
+
+
+
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <h1>Section1</h1>
+        </div>
+        <div class="section active" id="section1">
+            <h1>Section2</h1>
+        </div>
+        <div class="section" id="section2">
+            <h1>Section3</h1>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/fullpage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            console.log("ok");
+            var myFullpage = new fullpage('#fullpage', {
+                sectionsColor: ['#aaaaaa', '#4BBFC3', '#7BAABE'],
+                anchors: ['firstPage', 'secondPage', '3rdPage'],
+                menu: '#menu',
+                slidesNavigation: true,
+                lazyLoad: true,
+                credits: { enabled: false }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
