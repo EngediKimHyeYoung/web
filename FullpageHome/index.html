@@ -12,10 +12,11 @@
 
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <!--[if IE]>
         <script type="text/javascript">
-             var console = { log: function() {} };
+            ar console = { log: function() {} };
         </script>
     <![endif]-->
 </head>
@@ -28,18 +29,34 @@
         <li data-menuanchor="3rdPage"><a href="#3rdPage">Menu3</a></li>
     </ul>
 
-
+    <div id="spot_bg" class="spot_bg">
+        <video autoplay="" muted="" playsinline="" loop="">
+            <source src="https://ssl.pstatic.net/static/dm/boostcamp/video/boostcamp_main_vedio.mp4" type="video/mp4">
+        </video>
+    </div>
 
 
     <div id="fullpage">
-        <div class="section " id="section0">
+        <div class="section active" id="section0">
             <h1>Section1</h1>
         </div>
-        <div class="section active" id="section1">
+        <div class="section" id="section1">
             <h1>Section2</h1>
         </div>
         <div class="section" id="section2">
             <h1>Section3</h1>
+        </div>
+        <div class="section" id="section3">
+            <h1>Section4</h1>
+            <!-- <video autoplay="" muted="" playsinline="" loop="" class="video">
+                <source src="https://ssl.pstatic.net/static/dm/boostcamp/video/boostcamp_main_vedio.mp4" type="video/mp4">
+            </video> -->
+        </div>
+        <div class="section" id="section4">
+            <h1>Section5</h1>
+        </div>
+        <div class="section" id="section5">
+            <h1>Section6</h1>
         </div>
     </div>
 
@@ -48,17 +65,14 @@
     <script type="text/javascript" src="js/examples.js"></script>
 
     <script type="text/javascript">
-        window.onload = function () {
-            console.log("ok");
-            var myFullpage = new fullpage('#fullpage', {
-                sectionsColor: ['#aaaaaa', '#4BBFC3', '#7BAABE'],
-                anchors: ['firstPage', 'secondPage', '3rdPage'],
-                menu: '#menu',
-                slidesNavigation: true,
-                lazyLoad: true,
-                credits: { enabled: false }
-            });
-        }
+        var myFullpage = new fullpage('#fullpage', {
+            sectionsColor: ['rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'rgba(0,0,0,1)', 'rgba(0,0,0,1)'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4rdPage', '5rdPage', '6rdPage'],
+            menu: '#menu',
+            slidesNavigation: true,
+            lazyLoad: true,
+            credits: { enabled: false }
+        });
     </script>
 
 </body>

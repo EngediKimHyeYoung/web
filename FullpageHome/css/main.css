@@ -1,0 +1,24 @@
+body {
+    /* border: 5px solid blue; */
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    /* background-attachment: scroll; */
+}
+#fullpage {
+    /* border: 5px solid red; */
+    /* ba*
+    kground-size: cover; */
+    /* background-attachment: scroll; */
+}
+#section4 {
+
+}
+
+#spot_bg {
+    position: fixed;
+    border: 5px solid yellow;
+    transition: all 1.5s;
+    top: 0;
+    left: 0;
+    height: 100%;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <style>
+        html {
+            width: 100%;
+            overflow-x: hidden;
+            border: 2px solid red;
+            margin: 0 !important;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 2000px;
+            background-color: black;
+            color: white; 
+            box-sizing: border-box;
+            background-image: url("img/bg.jpg");
+            background-size:cover;
+            background-attachment: fixed;
+            margin: 0 !important;
+            padding: 0;
+        }
+
+        .box {
+            border: 10px solid white;
+            width: 60%;
+            height: 300px;
+            margin: 20%;
+            line-height: 300px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-sizing: border-box;
+            /* clear: both; */
+        }
+        .box:nth-child(odd) {
+            float: left;
+        }
+        .box:nth-child(even) {
+            float: right;
+        }
+        footer {
+            height: 500px;
+            background-color: rgba(0, 0, 0, 0.8);
+            clear: both;
+            text-align: center;
+            padding: 100px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        @media screen and (min-width: 768px) {
+            
+        }
+        @media screen and (min-width: 1440px) {
+            .box {
+                width: 700px;
+                margin: 100px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Animate On Scroll Library</h1>
+    <div>
+        <div data-aos="fade-up" class="box">fade-up</div>
+        <div data-aos="fade-down" class="box">fade-down</div>
+        <div data-aos="fade-right" class="box">fade-right</div>
+        <div data-aos="fade-left" class="box">fade-left</div>
+        <div data-aos="fade-up-right" class="box">fade-up-right</div>
+        <div data-aos="fade-up-left" class="box">fade-up-left</div>
+        <div data-aos="fade-down-right" class="box">fade-down-right</div>
+        <div data-aos="fade-down-left" class="box">fade-down-left</div>
+        <div data-aos="flip-left" class="box">flip-left</div>
+        <div data-aos="flip-right" class="box">flip-right</div>
+        <div data-aos="flip-up" class="box">flip-up</div>
+        <div data-aos="flip-down" class="box">flip-down</div>
+        <div data-aos="zoom-in" class="box">zoom-in</div>
+        <div data-aos="zoom-in-up" class="box">zoom-in-up</div>
+        <div data-aos="zoom-in-down" class="box">zoom-in-down</div>
+        <div data-aos="zoom-in-left" class="box">zoom-in-left</div>
+        <div data-aos="zoom-in-right" class="box">zoom-in-right</div>
+        <div data-aos="zoom-out" class="box">zoom-out</div>
+        <div data-aos="zoom-out-up" class="box">zoom-out-up</div>
+        <div data-aos="zoom-out-down" class="box">zoom-out-down</div>
+        <div data-aos="zoom-out-right" class="box">zoom-out-right</div>
+        <div data-aos="zoom-out-left" class="box">zoom-out-left</div>
+    </div>
+    <footer>
+        foot
+    </footer>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

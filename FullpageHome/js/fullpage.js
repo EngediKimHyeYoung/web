@@ -697,6 +697,7 @@
                     setMouseHijack(document['fp_' + e.type]); //e.type = eventName
                 }
             });
+
         }
 
         /**
@@ -1154,6 +1155,7 @@
                     }, options.fitToSectionDelay);
                 }
             }
+
         }
 
         /**
@@ -2357,6 +2359,7 @@
             }
 
             performHorizontalMove(slides, v, true);
+
         }
 
 
@@ -2525,6 +2528,7 @@
                 removeClass($(ACTIVE_SEL, menu), ACTIVE);
                 addClass($('[data-menuanchor="'+name+'"]', menu), ACTIVE);
             }
+            
         }
 
         /**
@@ -2533,6 +2537,26 @@
         function activateMenuAndNav(anchor, index){
             activateMenuElement(anchor);
             activateNavDots(anchor, index);
+            console.log(index);
+            // console.log($("#spot_bg"));
+            console.log(document.getElementById("spot_bg"));
+            // console.log("top: "+ document.getElementById("section5").getBoundingClientRect().top);
+            // document.getElementById("spot_bg").style.top = document.getElementById("section5").getBoundingClientRect().top;
+            // document.getElementById("spot_bg").style.border = "5px solid pink";
+            if(index == 0){
+                document.getElementById("spot_bg").style.filter = "blur(0px)";
+            } else {
+                document.getElementById("spot_bg").style.filter = "blur(30px)";
+            }
+            if(index == 3){
+                console.log("top: "+ document.getElementById("section5").getBoundingClientRect().top);
+                // document.getElementById("spot_bg").style.top = 300 +"px";
+                // document.getElementById("spot_bg").style.filter = "blur(0px)";
+            } else {
+
+            }
+            // $("#spot_bg").css("filter", "blur(10px");
+            // $("#spot_bg").css("border", "5px solid red");
         }
 
         /**
