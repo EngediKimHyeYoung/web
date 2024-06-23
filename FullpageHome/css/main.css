@@ -1,13 +1,13 @@
+body, nav, h1, ul, li, p {box-sizing: border-box;}
 body {
     /* border: 5px solid blue; */
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
+    /* background-image: url(../img/bg.jpg); */
+    /* background-size: cover; */
     /* background-attachment: scroll; */
 }
 #fullpage {
     /* border: 5px solid red; */
-    /* ba*
-    kground-size: cover; */
+    /* bakground-size: cover; */
     /* background-attachment: scroll; */
 }
 #section4 {
@@ -20,5 +20,29 @@ body {
     transition: all 1.5s;
     top: 0;
     left: 0;
+    width: 100%;
     height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
+
+nav {border: 3px solid red; position: fixed; top: 0; left: 0; z-index: 300; width: 100%; padding: 20px 50px 0 50px;}
+nav #navBtn {display: none;}
+nav h1 {border: 3px solid blue; float: inline-start; font-size: 3em;}
+nav #menu {position: static; float: right; width: fit-content; height: 100%;}
+nav #menu li:first-child {margin-left: 0;}
+nav #menu li:last-child {margin-right: 0;}
+
+footer {border: 1px solid red; width: 100%; background-color: gray; position: fixed; bottom: -145px; transition: bottom 1s; z-index: 999;}
+
+@media screen and (max-width: 1024px) {
+    nav {border: 3px solid pink;}
+    nav #navBtn {display: block; border: 1px solid red; position: fixed; top: 30px; right: 30px; z-index: 1000;}
+    nav h1 {border: 3px solid pink;}
+
+    nav #menu {width: 0; float:none; position: fixed; right: 0; left: initial; padding-top: 70px; background-color: black; transition: width 1s;}
+    nav #menu.open {width: 200px;}
+    nav #menu li {display: block; margin: 20px !important;}
+} 
+
+

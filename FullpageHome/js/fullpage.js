@@ -2534,6 +2534,7 @@
         /**
         * Sets to active the current menu and vertical nav items.
         */
+    //    engedi
         function activateMenuAndNav(anchor, index){
             activateMenuElement(anchor);
             activateNavDots(anchor, index);
@@ -2552,8 +2553,12 @@
                 console.log("top: "+ document.getElementById("section5").getBoundingClientRect().top);
                 // document.getElementById("spot_bg").style.top = 300 +"px";
                 // document.getElementById("spot_bg").style.filter = "blur(0px)";
-            } else {
-
+            } 
+            if(index == 4){
+                console.log(document.getElementsByTagName('footer')[0]);
+                document.getElementsByTagName('footer')[0].style.bottom = "0";
+            }  else {
+                document.getElementsByTagName('footer')[0].style.bottom = "-145px";
             }
             // $("#spot_bg").css("filter", "blur(10px");
             // $("#spot_bg").css("border", "5px solid red");
