@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            height: 3000px;
+        }
+
+        #top {
+            background-color: black;
+            color: white;
+            position: fixed;
+            bottom: -70px;
+            right: 60px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            transition: bottom 1s;;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="top">top</button>
+    <script>
+        $("#top").click(function () {
+            // $(window).scrollTop(0);
+            $("html, body").animate({ scrollTop: 0 }, 500);
+        });
+
+        // $(window).scrollTop(200);
+        // console.log($(window).scrollTop());
+        $(window).scroll(function () {
+            console.log($(window).scrollTop());
+            if ($(window).scrollTop() > 200) {
+                // $("#pageTop").css("visibility", "visible");
+                $("#top").css("bottom", "100px");
+            } else {
+                $("#top").css("bottom", "-70px");
+                // $("#pageTop").css("visibility", "hidden");
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -106,3 +106,5 @@ header nav ul li:last-child {margin-right: 0px;}
 #section1 .textSet .moreButton {opacity: 0; margin-top: 20px; animation-name: text1Motion; animation-duration: 1s; animation-fill-mode: forwards; animation-delay: 1.3s;}
 
 @keyframes text1Motion {to {opacity: 1; margin-top: 0;}}
+
+#section3 {height: 1000px;}
